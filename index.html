@@ -1,11 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" class="main">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name='viewport'
+    content='width=device-width,initial-scale=1, maximum-scale=1, shrink-to-fit=no,user-scalable=yes,viewport-fit=cover' />
+  <title>지형이포트폴리오</title>
+  <link rel="stylesheet" type="text/css" href="./css/font.css?">
+  <link rel="stylesheet" type="text/css" href="./css/xeicon.min.css" />
+  <!-- Replaced single large temp.css with organized importer. The importer preserves original rule order. -->
+  <link rel="stylesheet" type="text/css" href="./css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./js/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="./js/swiper/swiper.css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/aos/aos.js"></script>
+  <script type="text/javascript" src="./js/swiper/swiper.js"></script>
 </head>
+
 <body>
-    
+  <div id="header">
+    <div class="box0 inner headH flex vc space">
+      <div class="logo"><span class="point">JI</span>HYOUNG</div>
+      <div class="menu flex vc">
+        <div class="gnb_wrap">
+          <ul class="gnb flex linkNavWrap">
+            <li class="linkNav" data-no="1"><a class="dp1 flex ac" href="javascript:goLink('1',1)"><span class="in"><i
+                    class="tt">Portfolio</i></span></a></li>
+            <li class="linkNav" data-no="2"><a class="dp1 flex ac" href="javascript:goLink('2',1)"><span class="in"><i
+                    class="tt">Side Project</i></span></a></li>
+            <li class="linkNav" data-no="3"><a class="dp1 flex ac" href="javascript:goLink('3',1)"><span class="in"><i
+                    class="tt">About Me</i></span></a></li>
+            <!-- <li class="linkNav" data-no="4"><a class="dp1 flex ac" href="javascript:goLink('4',1)"><span class="in"><i class="tt">Contact</i></span></a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="right_wrap flex vc">
+        <ul class="change_list flex vc">
+          <li><a href="" class="flex vc hc light"><img src="../images/main/light.png"></a></li>
+          <li><a href="" class="on flex vc hc dark"><img src="../images/main/dark.png"></a></li>
+        </ul>
+        <div class="time_wrap">
+          <p id="clock"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contents">
+    <div class="roundG"></div>
+    <div class="roundR"></div>
+    <div class="mainVisual_wrap fullH headT cover hero-visual">
+      <div class="hero-inner ac">
+        <!-- 레이어 1: 기본 텍스트 (가독성 유지) -->
+        <h1 class="hero-title">Publisher<br>Portfolio</h1>
+        <!-- 파티클은 JS로 랜덤하게 여러 개 뿌리면 좋아 -->
+        <div class="sparkle" style="top:20%; left:35%; animation-delay:0s"></div>
+        <div class="sparkle" style="top:60%; left:55%; animation-delay:1.2s"></div>
+        <div class="sparkle" style="top:40%; left:70%; animation-delay:2.4s"></div>
+
+        <p class="hero-sub">유 지 형 — Web Publisher</p>
+        <button class="scroll-btn" aria-label="아래로 스크롤">↓</button>
+      </div>
+      <div class="visual_backdrop"></div>
+    </div>
+    <div class="main_con main_gallery" data-no="1" data-link="1">
+      <div class="lay_txt ac box1" data-aos="fade-right">
+        <div class="title_box flex space vc">
+          <p class="title">PORTFOLIO</p>
+        </div>
+      </div>
+      <div class="lay_con" data-aos="fade">
+        <div class="mainGallery_wrap">
+          <div class="mainGallery swiper-container">
+            <div class="swiper-wrapper"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main_con main_side" data-no="1" data-link="2">
+      <div class="box1">
+        <div class="title_box flex space vc">
+          <p class="title">SIDE PROJECT</p>
+        </div>
+        <ul class="side_list flex vt wrap"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="main_con about_skills" data-no="1" data-link="3">
+    <div class="box1">
+      <!-- ✨ 입자 레이어 (trail 아래에 위치) -->
+      <canvas id="particleCanvas"></canvas>
+      <!-- ✨ 빛의 궤적 레이어 -->
+      <canvas id="trailCanvas"></canvas>
+
+      <div class="about">
+        <div class="title_box flex space vc">
+          <p class="title">ABOUT ME</p>
+        </div>
+        <div class="about_contents flex vt hc">
+          <div class="conBox">
+            <div class="introduce_con">
+              <p class="t1">저는 항상 도전을 즐기며,<br>새로운 프로젝트에 열려있습니다.</p>
+              <p class="t2">함께 일하며 제가 가진 역량과 경험을 발휘하여 팀의 성과를 높이고자 합니다.<br>제가 참여한 프로젝트들은 다양한 산업과 분야에서 이루어졌습니다.<br>이를 통해 제가 얻은 경험은 분야별 요구 사항과 디자인을 충족시키는 데 큰 도움이 되었습니다.<br>또한, 고객들의 니즈에 맞추어 웹사이트를 제작하는 능력을 갖추었습니다.</p>
+            </div>
+            <div class="history_con">
+              <div class="in">
+                <p class="tit">EDUCATION</p>
+                <p class="tt">2022.03 - 2022.08<br>UX/UI 웹디자인/웹퍼블리셔[과정평가형 국가기술자격증] - 이젠아카데미평생교육원</p>
+                <p class="tt">2015.03 - 2019.09<br>우송대학교 외식조리학과 졸업</p>
+              </div>
+              <div class="in">
+                <p class="tit">WORK EXPERIENCE</p>
+                <p class="tt">2022.10 - 재직중<br>아이넷피아커뮤니케이션</p>
+                <p class="tt">2019.12 - 2022.01<br>요거프레소</p>
+              </div>              
+            </div>
+          </div>
+          <div class="conBox">
+            <ul class="skill_list flex wrap"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- accessible gallery modal (initially hidden) -->
+  <div class="galleryModal" id="galleryModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modalOverlay" data-action="close" tabindex="-1"></div>
+    <div class="modalDialog" role="document">
+      <button class="modalClose" data-action="close" aria-label="모달 닫기">×</button>
+      <button class="modalNav prev" data-action="prev" aria-label="이전 프로젝트">‹</button>
+      <button class="modalNav next" data-action="next" aria-label="다음 프로젝트">›</button>
+      <div class="modalBody">
+        <div class="modalMedia">
+          <p class="img"><img src="./images/main/portfolio01.jpg" alt=""></p>
+        </div>
+        <div class="modalContent">
+          <h3 class="t1">대한전기협회</h3>
+          <a class="btn modalLink" target="_blank" rel="noopener noreferrer">사이트 바로가기</a>
+          <div class="info">
+            <p class="tt">프로젝트때 내가 했던 역할이 들어갑니다.</p>
+            <p class="tt">프로젝트때 내가 했던 역할이 들어갑니다.</p>
+            <p class="tt">프로젝트때 내가 했던 역할이 들어갑니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="box1">
+      <div class="site_info flex vb space">
+        <div class="myinfo">
+          <p class="name">Yu Ji Hyoung</p>
+          <p class="mail"><img src="../images/main/mail.png">email : bearmon27@naver.com</p>
+        </div>
+        <p class="copy">© 2025 Yu Ji Hyoung All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/contentManager.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/themeManager.js"></script>
+  <script src="./js/particleEngine.js"></script>
+  <script src="./js/sliderManager.js"></script>
+  <script src="./js/js.js"></script>
 </body>
+
 </html>
