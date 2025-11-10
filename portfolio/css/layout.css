@@ -1,0 +1,87 @@
+/* layout.css — header, navigation, footer and related layout rules
+   Extracted from parts/part1.css to improve organization while preserving cascade/order.
+*/
+
+#header { position:fixed; z-index:999; top:0; left:0; width:100%; background: var(--overlay-strong); }
+#header > .inner { position:relative; }
+#header .logo { font-size: 1.8em; color: var(--color-text); font-weight: 800; }
+#header .logo .point { color: var(--accent-color); margin-right: 10px; }
+#header .gnb_wrap .gnb { background: var(--overlay-light); padding: .5em; border-radius: 3em; overflow: hidden; }
+#header .gnb_wrap .gnb > li .dp1 { padding:.5em 3em; border-radius: 3em; }
+#header .gnb_wrap .gnb > li .dp1 .tt { font-size:1.125em; color: var(--color-text); }
+#header .gnb_wrap .gnb > li .dp1:hover { background: var(--accent-color); }
+#header .right_wrap { gap: 0 2em; }
+#header .right_wrap .change_list { background: var(--overlay-light); padding: .5em; border-radius: 3em; gap: 1em; overflow: hidden; }
+#header .right_wrap .change_list li { position: relative; }
+#header .right_wrap .change_list li:not(:last-child):after { content:""; position:absolute; top:50%; right:-5px; transform:translateY(-50%); background: var(--sep-light); width: 1px; height: 20px; }
+#header .right_wrap .change_list li > a { display: block; width: 2em; height: 2em; text-align: center; border-radius: 50%; }
+#header .right_wrap .change_list li > a img { width: 20px; filter: brightness(0) invert(1); }
+#header .right_wrap .change_list li > a.on { background: var(--accent-color); }
+#header .right_wrap .change_list li > a.on img { /* intentionally minimal: icons are image-swapped via img */ filter: brightness(0) invert(1); --moved: layout; }
+#header .time_wrap { width: 6.5em; text-align: center; }
+#header .time_wrap p { color: var(--color-text); font-size:1.4em; }
+
+
+#footer { /* footer is dark, content in .site_info below */ --moved: layout; }
+#footer .site_info { padding: 6em 0; border-top: 1px solid var(--sep-light); }
+#footer .site_info .myinfo { /* contact/meta area */ --moved: layout; }
+#footer .site_info .myinfo .name { font-size: 3em; font-weight: 700; color: var(--color-text); }
+#footer .site_info .myinfo .mail { color: var(--color-text); font-size: 1.25em; margin-top: 1em; }
+#footer .site_info .myinfo .mail img {width: 2em; vertical-align: middle; margin-right: 1em;}
+#footer .site_info .copy { color: var(--color-muted); font-size: 1.125em; text-transform: uppercase; }
+/* layout.css — header, footer, containers and basic layout rules
+   Extracted from original temp.css; order preserved relative to other imports in base.css.
+*/
+
+#header { position:fixed; z-index:999; top:0; left:0; width:100%; background: var(--overlay-strong); } 
+#header > .inner { position:relative; } 
+#header .logo { font-size: 1.8em; color: var(--color-text); font-weight: 800; } 
+#header .logo .point { color: var(--accent-color); margin-right: 10px; } 
+#header .gnb_wrap .gnb { background: var(--overlay-light); padding: .5em; border-radius: 3em; overflow: hidden; } 
+#header .gnb_wrap .gnb > li .dp1 { padding:.5em 3em; border-radius: 3em; } 
+#header .gnb_wrap .gnb > li .dp1 .tt { font-size:1.125em; color: var(--color-text); } 
+#header .gnb_wrap .gnb > li .dp1:hover { background: var(--accent-color); } 
+#header .right_wrap { gap: 0 2em; } 
+#header .right_wrap .change_list { background: var(--overlay-light); padding: .5em; border-radius: 3em; gap: 1em; overflow: hidden; } 
+#header .right_wrap .change_list li { position: relative; } 
+#header .right_wrap .change_list li:not(:last-child):after { content:""; position:absolute; top:50%; right:-5px; transform:translateY(-50%); background: var(--sep-light); width: 1px; height: 20px; } 
+#header .right_wrap .change_list li > a { display: block; width: 2em; height: 2em; text-align: center; border-radius: 50%; } 
+#header .right_wrap .change_list li > a img { width: 20px; filter: brightness(0) invert(1); } 
+#header .right_wrap .change_list li > a.on { background: var(--accent-color); } 
+#header .right_wrap .change_list li > a.on img { } 
+#header .time_wrap { width: 6.5em; text-align: center; } 
+#header .time_wrap p { color: var(--color-text); font-size:1.4em; } 
+
+#footer .site_info { padding: 6em 0; border-top: 1px solid rgba(255,255,255,.2); } 
+#footer .site_info .myinfo .name { font-size: 3em; font-weight: 700; color: #fff; } 
+#footer .site_info .myinfo .mail { color: #fff; font-size: 1.25em; margin-top: 1em; } 
+#footer .site_info .copy { color: rgba(255, 255, 255, .6); font-size: 1.125em; text-transform: uppercase; }  
+
+#contents { position: relative; } 
+.roundG { position: fixed; left: 12%; top: 0; width: 40%; padding-bottom: 40%; border-radius: 50%; background: linear-gradient(0deg, var(--white) 0%, var(--white) 33.33%, var(--white) 100%); opacity: .1; filter: blur(10px); animation-name: mainServiceAni2; animation-duration: 13s; animation-iteration-count: infinite; animation-direction: alternate; z-index: -1; } 
+.roundR { position: fixed; right: 12%; top: 35%; width: 40%; padding-bottom: 40%; border-radius: 50%; background: linear-gradient(0deg, var(--white) 0%, var(--white) 33.33%, var(--white) 100%); animation-name: mainServiceAni3; animation-duration: 13s; animation-iteration-count: infinite; animation-direction: alternate; filter: blur(10px); opacity: .1; z-index: -2; } 
+@keyframes mainServiceAni { 
+ 0% { transform: rotate(0) translate(0, 0) scale(1) } 
+ 100% { transform: rotate(360deg) translate(20%, 5%) scale(1.2, 1); } 
+ }
+@keyframes mainServiceAni2 { 
+ 0% { transform: rotate(0) translate(0, 0) scale(1) } 
+ 100% { transform: rotate(360deg) translate(10%, 5%) scale(1.2, 1); } 
+ }
+@keyframes mainServiceAni3 { 
+ 0% { transform: rotate(0) translate(0, 0) scale(1) } 
+ 100% { transform: rotate(-360deg) translate(10%, 5%) scale(1.2, 1); } 
+ }
+
+.dwrap { position:relative; width:2000px; left:50%; top:0; margin-left:-1000px } 
+.dwrap img { display:block } 
+.box0 { width:94%; max-width:94%; margin:0 auto; } 
+.box1 { width:1600px; max-width:94%; margin:0 auto; } 
+
+.fullH { height:100vh; } 
+.headH { height:6em; } 
+/* layout.css - placeholder for layout-specific rules (header/footer/containers)
+   Currently layout rules are inside ./css/parts/part1.css. When you want, we can move
+   header/footer/box rules here and keep the same order by making sure base.css imports
+   files in the intended cascade order.
+*/

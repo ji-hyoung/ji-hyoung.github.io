@@ -1,0 +1,30 @@
+/* responsive.css — media queries extracted from parts/part2.css
+   Loaded after components.css to preserve cascade.
+*/
+
+@media screen and (max-width:1680px) { body { font-size:15px; } }
+
+@media screen and (max-width:1400px) { }
+
+@media screen and (max-width:1280px) { }
+
+@media screen and (max-width:1024px) { 
+  [data-aos^=fade][data-aos^=fade] { opacity:1 !important; transform:translateZ(0) !important; } 
+  .PC { display: none; } 
+  .PHONE { display: block; } 
+  .goTop { display:none; } 
+}
+
+@media screen and (max-width:768px) { body { font-size:14px; } }
+
+@media screen and (max-width:460px) {}
+
+@media screen and (max-width:380px) { body { font-size:12px; } }
+
+@media screen and (max-width:320px) { }
+
+@media screen and (max-width:280px) { body { font-size:10px; } }
+
+@media all and (max-width:1024px) and (orientation:landscape) { }
+
+@media screen and (max-device-width:1024px) { }

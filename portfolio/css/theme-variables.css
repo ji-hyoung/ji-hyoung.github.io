@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* theme-variables.css — centralized theme colors and light/dark mappings
+   This file is imported before utilities.css so all components can use vars.
+*/
+
+:root {
+   --grad1: #0f0c29;
+   --grad2: #302b63;
+   --grad3: #24243e;
+   --grad4: #00d4ff;
+   --primary: var(--grad4);
+   --bg-dark: #0b0b0c;
+   --bg-light: #fafafa;
+   --text-dark: #f2f2f2;
+   --text-light: #1b1b1b;
+
+   /* Semantic color/shadow variables for easier theme overrides */
+   --overlay-strong: rgba(0,0,0,0.6);      /* modal overlay, heavy */
+   --overlay-medium: rgba(0,0,0,0.18);     /* medium dark overlays */
+   --overlay-light: rgba(0,0,0,0.7);      /* subtle dark overlay */
+   --panel-bg: rgba(0,0,0,0.8);        /* modal panels / deep panels */
+   --card-bg: rgba(255,255,255,0.08);      /* light card bg used on dark theme */
+   --text-ghost: rgba(255,255,255,0.92);   /* muted white text */
+   --title-sub: rgba(255,255,255,0.9);     /* hero subtitle */
+
+   --hero-before-a: rgba(140,100,255,0.6);
+   --hero-before-b: rgba(0,240,255,0.4);
+   --hero-before-c: rgba(255,255,255,0.2);
+
+   --hero-glow-a: rgba(108,99,255,0.8);
+   --hero-glow-b: rgba(0,240,255,0.7);
+   --hero-glow-c: rgba(0,240,255,0.5);
+
+   /* Particle / trail base colors (alpha adjusted dynamically in JS) */
+   --trail-dark: rgba(0,240,255,0.8);
+   --trail-light: rgba(108,99,255,0.6);
+
+   --shadow-strong: 0 20px 60px rgba(0,0,0,0.6);
+   --shadow-medium: 0 8px 30px rgba(0,0,0,0.18);
+   --shadow-small: 0 2px 18px rgba(0,0,0,0.12);
+
+   --sep-light: rgba(255,255,255,0.08);
+   --sep-dark: rgba(17,17,17,0.08);
+      --graph-fill: rgba(255,255,255,0.4);
+      --white-overlay: rgba(255,255,255,0.95);
+      /* high level semantic colors (map per theme below) */
+      --white: #ffffff;
+      --black: #000000;
+      --color-bg: var(--bg-dark);
+      --color-surface: var(--panel-bg);
+      --color-text: var(--text-dark);
+      --color-muted: var(--text-ghost);
+      --accent-1: #6c63ff; /* purple */
+      --accent-2: #9b5de5;
+      --accent-3: #00f0ff; /* aqua */
+      --accent-cta: #bd4b62; /* call-to-action */
+}
+
+[data-theme="light"], body[data-theme="light"] {
+   /* Light theme - override color variables used across the project
+       Ensure main point color (--grad4 / --primary) is the requested #00d4ff
+       and provide rgba variants for any animations/effects that depend on them. */
+   --grad1: #f4b3ff;
+   --grad2: #ffffff;
+   --grad3: #fcf9ff;
+   --grad4: #27cdee; /* main point color */
+   --primary: #2263a4;
+
+   /* Trails / glow used in particle or trail effects (use the primary color in rgba form)
+       alpha tuned for good visibility on light backgrounds. */
+   --trail-dark: rgba(0,212,255,0.85);
+   --trail-light: rgba(0,212,255,0.45);
+
+   /* Background / text swaps for light theme */
+   --bg-dark: #ffffff;
+   --bg-light: #ffffff;
+   --text-dark: #111111;
+   --text-light: #111111;
+
+   /* light theme semantic mappings */
+   --white: #2263a4;
+   --black: #111111;
+   --color-bg: var(--bg-light);
+   --color-surface: rgba(17,17,17,0.04);
+   --color-text: var(--text-dark);
+   --color-muted: rgba(17,17,17,0.6);
+   --card-bg: #fff;
+
+   background: var(--bg-light);
+   color: var(--text-light);
+
+   --panel-bg: rgba(255,255,255,.7); 
+}
+
+/* Hero title: default for dark mode, and primary color only in light mode */
+[data-theme="dark"] .mainVisual_wrap .hero-title,
+body[data-theme="dark"] .mainVisual_wrap .hero-title {
+   color: var(--text-dark) !important;
+}
+
+[data-theme="light"] .mainVisual_wrap .hero-title,
+body[data-theme="light"] .mainVisual_wrap .hero-title {
+   color: var(--primary) !important;
+}
+
+/* Light-theme specific tweaks for elements that often use rgba colors directly.
+    These provide reasonable defaults so animations/glows remain visible on light bg. */
+[data-theme="light"] .sparkle, body[data-theme="light"] .sparkle {
+   background: var(--primary);
+   box-shadow: 0 0 14px var(--trail-dark);
+}
+
+[data-theme="light"] .visual_backdrop {
+   /* subtle light gradient backdrop that plays nicely with primary */
+   background: linear-gradient(180deg, var(--grad1), var(--grad2));
+}
+
+[data-theme="light"] .hero-sub {
+   color: rgba(17,17,17,0.75);
+}
+
+[data-theme="light"] #header {
+   background: rgba(255,255,255,0.96); /* lighter header background */
+   color: var(--text-dark);
+}
+
+[data-theme="light"] #header .gnb_wrap .gnb {
+   background: rgba(17,17,17,0.04);
+}
+
+[data-theme="light"] #header .right_wrap .change_list {
+   background: rgba(17,17,17,0.04);
+}
+
+[data-theme="light"] #header .right_wrap .change_list li:not(:last-child):after {
+   background: rgba(17,17,17,0.12);
+}
+
+[data-theme="light"] #footer .site_info {
+   border-top: 1px solid rgba(17,17,17,0.06);
+}
+[data-theme="light"] #footer .site_info .myinfo .name,
+[data-theme="light"] #footer .site_info .myinfo .mail {
+   color: var(--primary);
+}
+
+[data-theme="light"] #footer .site_info .copy {
+   color: rgba(17,17,17,0.6);
+}
+
+/* Swiper / controls adjustments (overrides third-party css gradients and shadows) */
+[data-theme="light"] .swiper-button-prev,
+[data-theme="light"] .swiper-button-next,
+[data-theme="light"] .swiperBtn.c2 {
+   background: rgba(0,0,0,0.06) !important;
+   color: var(--text-dark) !important;
+}
+
+[data-theme="light"] .swiperBtn.c2.play { background: rgba(0,0,0,0.10) !important; }
+
+[data-theme="light"] .swiperPG .paging > span.swiper-pagination-bullet-active {
+   box-shadow: 1px 1px .375em rgba(0,0,0,0.08) !important;
+}
+
+[data-theme="light"] .swiperBtn.st1.white { border-color: rgba(0,0,0,0.12) !important; }
+[data-theme="light"] .swiperBtn.st1.white.play { border-color: rgba(0,0,0,0.08) !important; }
+
+/* Pagination / bullets and white-button variants for light mode */
+[data-theme="light"] .swiper-pagination.white .swiper-pagination-bullet { background: var(--white); opacity: .5; }
+[data-theme="light"] .swiper-pagination .swiper-pagination-bullet-active { background: var(--white) !important; box-shadow: 1px 1px .375em rgba(0,0,0,0.08) !important; }
+[data-theme="light"] .swiper-button-prev.swiper-button-white, [data-theme="light"] .swiper-button-next.swiper-button-white { filter: none !important; }
+
+/* visual_backdrop: provide a soft light gradient instead of heavy black */
+[data-theme="light"] .visual_backdrop {
+   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--grad2) 100%);
+}
+
+/* Hero glow/text-shadow adjustments for light mode — force primary-based glow */
+[data-theme="light"] .hero-title {
+   color: var(--primary) !important;
+   text-shadow: 0 0 6px rgb(32 67 155 / 95%) !important;
+}
+
+[data-theme="light"] .hero-title::before {
+   text-shadow: 0 0 8px rgba(0,212,255,0.6), 0 0 18px rgba(0,212,255,0.45), 0 0 30px rgba(255,255,255,0.25) !important;
+}
+
+[data-theme="light"] .hero-title::before {
+   /* disable the original neon animation so the light-mode shadow stays consistent */
+   animation: none !important;
+}
+[data-theme="light"] .about_contents .conBox {
+   border: 1px solid #ddd;
+}
+
+/* Swiper shadow gradients: switch to white->transparent for light mode */
+[data-theme="light"] .swiper-container-3d .swiper-slide-shadow-left {
+   background-image: linear-gradient(to left, rgba(255,255,255,0.5), rgba(255,255,255,0)) !important;
+}
+[data-theme="light"] .swiper-container-3d .swiper-slide-shadow-right {
+   background-image: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0)) !important;
+}
+[data-theme="light"] .swiper-container-3d .swiper-slide-shadow-top {
+   background-image: linear-gradient(to top, rgba(255,255,255,0.5), rgba(255,255,255,0)) !important;
+}
+[data-theme="light"] .swiper-container-3d .swiper-slide-shadow-bottom {
+   background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0)) !important;
+}
+
+/* general components that used rgba white overlays */
+[data-theme="light"] .overlay-dark, [data-theme="light"] .dp-overlay {
+   background: rgba(0,0,0,0.04) !important;
+}
+
+/* fallback: any remaining direct rgba(255,255,255,...) used for separators/lines
+    will be replaced visually in light mode with subtle dark variants */
+[data-theme="light"] * { --overlay-sep: rgba(17,17,17,0.08); }
+
+/* Additional Swiper white/black/pagination overrides for light mode */
+[data-theme="light"] .swiper-pagination-white .swiper-pagination-bullet-active { background: var(--white) !important; }
+[data-theme="light"] .swiper-pagination-progressbar.swiper-pagination-white { background: rgba(255,255,255,0.12) !important; }
+[data-theme="light"] .swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill { background: var(--white) !important; }
+
+[data-theme="light"] .swiper-pagination-black .swiper-pagination-bullet-active { background: rgba(0,0,0,0.85) !important; }
+[data-theme="light"] .swiper-pagination-progressbar.swiper-pagination-black { background: rgba(0,0,0,0.08) !important; }
+[data-theme="light"] .swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill { background: rgba(0,0,0,0.65) !important; }
+
+[data-theme="light"] .swiper-button-prev.swiper-button-white,
+[data-theme="light"] .swiper-button-next.swiper-button-white {
+   filter: none !important;
+}
+
+[data-theme="light"] .swiper-scrollbar { background: rgba(0,0,0,0.04) !important; }

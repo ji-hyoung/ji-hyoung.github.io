@@ -1,0 +1,160 @@
+{
+    "portfolioItems": [
+        {
+            "title": "대한전기협회",
+            "image": "./images/main/portfolio01.jpg",
+            "alt": "대한전기협회 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/daejeon",
+            "info": [
+                "퍼블리싱 및 반응형 레이아웃 구현",
+                "접근성 및 SEO 최적화 적용"
+            ],
+            "description": "대한전기협회 공식 웹사이트 퍼블리싱 작업"
+        },
+        {
+            "title": "캘리포니아주립대",
+            "image": "./images/main/portfolio03.jpg",
+            "alt": "캘리포니아주립대 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/calstate",
+            "info": [
+                "UI/UX 개선 및 이미지 최적화",
+                "콘텐츠 구조화 작업"
+            ],
+            "description": "대학 홍보 사이트 퍼블리싱 및 콘텐츠 마이그레이션"
+        },
+        {
+            "title": "산타모니카주립대",
+            "image": "./images/main/portfolio04.jpg",
+            "alt": "산타모니카주립대 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/santamonica",
+            "info": [
+                "반응형 그리드 설계",
+                "터치 인터랙션 개선"
+            ],
+            "description": "학부/학과 소개 페이지 리뉴얼 퍼블리싱"
+        },
+        {
+            "title": "텍사스주립대",
+            "image": "./images/main/portfolio05.jpg",
+            "alt": "텍사스주립대 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/texasstate",
+            "info": [
+                "대용량 이미지 최적화",
+                "접근성 레이블 추가"
+            ],
+            "description": "학교 캠퍼스 정보 페이지 퍼블리싱"
+        },
+        {
+            "title": "바코드판다",
+            "image": "./images/main/portfolio25.jpg",
+            "alt": "바코드판다 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/barcodepanda",
+            "info": [
+                "전자상거래 상품 리스트 퍼블리싱",
+                "반응형 카드 레이아웃 구현"
+            ],
+            "description": "쇼핑몰 UI 퍼블리싱 및 반응형 최적화"
+        },
+        {
+            "title": "한국바이오임상센터",
+            "image": "./images/main/portfolio16.jpg",
+            "alt": "한국바이오임상센터 웹사이트 미리보기",
+            "link": "https://example.com/portfolio/bioclinic",
+            "info": [
+                "의료 정보 페이지 구조화",
+                "접근성 및 가독성 향상 작업"
+            ],
+            "description": "의료기관 웹사이트 퍼블리싱"
+        }
+    ],
+    "sideProjects": [
+        {
+            "title": "Brand Landing Page",
+            "description": "기업 소개와 제품 정보를 담은 원페이지 랜딩 사이트 제작",
+            "image": ""
+        },
+        {
+            "title": "Event Promotion",
+            "description": "이벤트 참여 유도를 위한 인터랙티브 웹 프로모션",
+            "image": ""
+        },
+        {
+            "title": "Responsive Renewal",
+            "description": "반응형 퍼블리싱으로 개선한 기존 홈페이지 리뉴얼",
+            "image": ""
+        },
+        {
+            "title": "Dashboard UI",
+            "description": "데이터 시각화를 강화한 관리자 대시보드 UI 설계",
+            "image": ""
+        },
+        {
+            "title": "Style Guide",
+            "description": "일관된 UI 적용을 위한 컴포넌트 스타일 가이드 제작",
+            "image": ""
+        },
+        {
+            "title": "Proto Testing",
+            "description": "사용자 테스트 기반 인터랙션 프로토타입 제작",
+            "image": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "percentage": 80,
+            "image": "./images/main/skill01.jpg",
+            "alt": "HTML아이콘",
+            "graphClass": "stack"
+        },
+        {
+            "name": "CSS",
+            "percentage": 80,
+            "image": "./images/main/skill02.jpg",
+            "alt": "CSS아이콘",
+            "graphClass": "stack2"
+        },
+        {
+            "name": "javascript&jQuery",
+            "percentage": 60,
+            "image": "./images/main/skill05.jpg",
+            "alt": "javascript아이콘",
+            "graphClass": "stack3"
+        },
+        {
+            "name": "Photoshop",
+            "percentage": 80,
+            "image": "./images/main/skill03.jpg",
+            "alt": "포토샵아이콘",
+            "graphClass": "stack4"
+        },
+        {
+            "name": "Illustrator",
+            "percentage": 80,
+            "image": "./images/main/skill04.jpg",
+            "alt": "일러스트레이터아이콘",
+            "graphClass": "stack5"
+        },
+        {
+            "name": "Figma",
+            "percentage": 60,
+            "image": "./images/main/skill07.jpg",
+            "alt": "피그마아이콘",
+            "graphClass": "stack6"
+        },
+        {
+            "name": "Tailwind",
+            "percentage": 60,
+            "image": "./images/main/skill08.jpg",
+            "alt": "TAILWIND아이콘",
+            "graphClass": "stack7"
+        },
+        {
+            "name": "React",
+            "percentage": 40,
+            "image": "./images/main/skill09.jpg",
+            "alt": "REACT아이콘",
+            "graphClass": "stack8"
+        }
+    ]
+}

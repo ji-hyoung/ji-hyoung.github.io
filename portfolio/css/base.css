@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* base importer - preserves original stylesheet order by importing split parts */
+@import url("./theme-variables.css");
+@import url("./utilities.css");
+@import url("./layout.css");
+@import url("./components.css");
+@import url("./responsive.css");
+
+/* Helpful placeholders for future targeted splits (do not change content order). */
+/* See ./css/parts/*.css for the exact rules imported above. */
