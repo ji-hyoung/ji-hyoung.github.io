@@ -5,6 +5,8 @@
         qsa: (s) => Array.from(document.querySelectorAll(s)),
         safeGet: (id) => document.getElementById(id),
     };
+    const reduceMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    const prefersReducedMotion = () => Boolean(reduceMotionQuery && reduceMotionQuery.matches);
 
     document.addEventListener('DOMContentLoaded', () => {
         const contentManager = window.ContentManager;
@@ -12,7 +14,7 @@
 
         // Theme
         const themeToggle = safeGet('themeToggle');
-        const headerThemeBtns = qsa('.change_list a');
+        const headerThemeBtns = qsa('.change_list button');
         const ThemeManagerClass = window.ThemeManager;
         const themeManager = ThemeManagerClass
             ? new ThemeManagerClass({ toggleBtn: themeToggle, selectorBtns: headerThemeBtns })
@@ -29,6 +31,10 @@
         if (engine) {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
+                    if (prefersReducedMotion()) {
+                        engine.stop();
+                        return;
+                    }
                     if (entry.isIntersecting) engine.start(() => (themeManager ? themeManager.theme : 'dark'));
                     else engine.stop();
                 });
@@ -36,9 +42,21 @@
 
             const aboutSection = qs('.about_skills');
             if (aboutSection) observer.observe(aboutSection);
+
+            if (reduceMotionQuery) {
+                reduceMotionQuery.addEventListener('change', (event) => {
+                    if (event.matches) {
+                        engine.stop();
+                    }
+                });
+            }
         }
 
         const initAOS = () => {
+            if (prefersReducedMotion()) {
+                document.documentElement.classList.add('aos-disabled');
+                return;
+            }
             AOS.init({
                 disable: false,
                 startEvent: 'DOMContentLoaded',
@@ -75,22 +93,32 @@
                 }
             });
 
-        // goLink (global)
-        window.goLink = function (target, M) {
-            var T = $('[data-link=' + target + ']').offset().top;
-            var headerH = $('#header').outerHeight();
-            var C;
-            if (M == 0) {
-                C = $('#header .wrapHide').outerHeight();
-            } else if (M == 1) {
-                var tabH = $('#contents .linkNavWrap').outerHeight();
-                C = tabH + headerH;
-            } else {
-                C = 0;
-            }
-            var V = T - C;
-            $('body, html').animate({ scrollTop: V }, 500);
-        };
+        const header = qs('#header');
+        const getHeaderHeight = () => (header ? header.offsetHeight : 0);
+        const scrollTargets = qsa('[data-scroll-target]');
+        scrollTargets.forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                const href = trigger.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                const targetEl = document.querySelector(href);
+                if (!targetEl) return;
+                event.preventDefault();
+                const top = targetEl.getBoundingClientRect().top + window.pageYOffset - getHeaderHeight();
+                window.scrollTo({ top, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+                const previousTabIndex = targetEl.getAttribute('tabindex');
+                targetEl.setAttribute('tabindex', '-1');
+                targetEl.focus({ preventScroll: true });
+                const removeTabIndex = () => {
+                    targetEl.removeEventListener('blur', removeTabIndex);
+                    if (previousTabIndex === null) {
+                        targetEl.removeAttribute('tabindex');
+                    } else {
+                        targetEl.setAttribute('tabindex', previousTabIndex);
+                    }
+                };
+                targetEl.addEventListener('blur', removeTabIndex);
+            });
+        });
 
         // layer open/close (global)
         window.layerOpen = function (url) {
@@ -114,7 +142,7 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             const el = document.getElementById('clock');
-            if (el) el.innerHTML = `${hours}:${minutes}:${seconds}`;
+            if (el) el.textContent = `${hours}:${minutes}:${seconds}`;
         };
         setInterval(window.updateClock, 1000);
         window.updateClock();

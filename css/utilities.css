@@ -11,12 +11,46 @@ em,i { font-style:normal; }
 strong,th { font-weight:600; } 
 b { font-weight:700; } 
 img { border:none; max-width:100%; } 
-*:focus { outline:none; } 
+*:focus:not(:focus-visible) { outline: none; } 
 
 a,
 a:visited,
 a:active,
 a:hover { text-decoration:none; } 
+
+:where(a, button, [role="button"], [tabindex], input, select, textarea):focus-visible {
+   outline: 3px solid var(--focus-ring);
+   outline-offset: var(--focus-ring-offset);
+   box-shadow: 0 0 0 4px var(--focus-ring-contrast);
+}
+
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+}
+
+.skip-link {
+   position: absolute;
+   top: -100px;
+   left: 50%;
+   transform: translateX(-50%);
+   background: var(--color-bg);
+   color: var(--color-text);
+   padding: .75em 1.5em;
+   border-radius: .75em;
+   z-index: 1000;
+   transition: top .2s ease;
+}
+
+.skip-link:focus {
+   top: 1em;
+}
 
 .al { text-align: left !important; } 
 .ac { text-align: center !important; } 
@@ -89,6 +123,15 @@ a:hover { text-decoration:none; }
 .fstS2 { letter-spacing:-.125em !important; } 
 
 .lh0 { line-height:1; } 
+
+@media (prefers-reduced-motion: reduce) {
+   *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
 .lh1 { line-height:1.6; } 
 .lh2 { line-height:1.8; } 
 .wb { word-break:keep-all } 
@@ -105,8 +148,6 @@ a:hover { text-decoration:none; }
 
 .dwrap { position:relative; width:2000px; left:50%; top:0; margin-left:-1000px } 
 .dwrap img { display:block } 
-.box0 { width:94%; max-width:94%; margin:0 auto; } 
-.box1 { width:1600px; max-width:94%; margin:0 auto; } 
 
 .fullH { height:100vh; } 
 .headH { height:6em; } 
@@ -115,6 +156,7 @@ a:hover { text-decoration:none; }
 /* Import that file from base.css so variables are available globally. */
 
 .PC { display: block; } 
+.flex.PC { display: flex; } 
 .PHONE { display: none; }
 /* utilities.css - placeholder for grouped utility classes (future refactor)
    Right now the project's active rules are imported via base.css -> parts/*.css

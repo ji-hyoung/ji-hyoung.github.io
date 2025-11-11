@@ -8,6 +8,20 @@
             this.particleCanvas = safeGet(particleCanvasId);
             if (!this.aboutSection || !this.trailCanvas || !this.particleCanvas) return;
 
+            this.reduceMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+            if (this.reduceMotionQuery) {
+                const handler = (event) => {
+                    if (event.matches) {
+                        this.stop();
+                    }
+                };
+                if (this.reduceMotionQuery.addEventListener) {
+                    this.reduceMotionQuery.addEventListener('change', handler);
+                } else if (this.reduceMotionQuery.addListener) {
+                    this.reduceMotionQuery.addListener(handler);
+                }
+            }
+
             this.trailCtx = this.trailCanvas.getContext('2d');
             this.pCtx = this.particleCanvas.getContext('2d');
             if (this.trailCtx) {
@@ -26,6 +40,7 @@
 
             this.animating = false;
             this.animationId = null;
+            this.themeProvider = () => 'dark';
 
             this.resize = this.resize.bind(this);
             window.addEventListener('resize', this.resize, { passive: true });
@@ -226,10 +241,16 @@
 
         start(themeProvider) {
             if (this.animating) return;
+            this.themeProvider = typeof themeProvider === 'function' ? themeProvider : () => 'dark';
+            if (this.reduceMotionQuery && this.reduceMotionQuery.matches) {
+                this.animating = false;
+                return;
+            }
             this.animating = true;
             const loop = () => {
-                this.drawTrail(themeProvider());
-                this.drawParticles(themeProvider());
+                const theme = this.themeProvider();
+                this.drawTrail(theme);
+                this.drawParticles(theme);
                 this.animationId = requestAnimationFrame(loop);
             };
             loop();

@@ -13,6 +13,9 @@
    --bg-light: #fafafa;
    --text-dark: #f2f2f2;
    --text-light: #1b1b1b;
+   --focus-ring: #27cdee;
+   --focus-ring-contrast: rgba(255,255,255,0.28);
+   --focus-ring-offset: 3px;
 
    /* Semantic color/shadow variables for easier theme overrides */
    --overlay-strong: rgba(0,0,0,0.6);      /* modal overlay, heavy */
@@ -54,6 +57,7 @@
       --accent-2: #9b5de5;
       --accent-3: #00f0ff; /* aqua */
       --accent-cta: #bd4b62; /* call-to-action */
+      --accent-color: #3c9a8c; /* legacy highlight tone */
 }
 
 [data-theme="light"], body[data-theme="light"] {
@@ -76,6 +80,8 @@
    --bg-light: #ffffff;
    --text-dark: #111111;
    --text-light: #111111;
+   --focus-ring: #1a5fd7;
+   --focus-ring-contrast: rgba(17,17,17,0.25);
 
    /* light theme semantic mappings */
    --white: #2263a4;
@@ -84,12 +90,20 @@
    --color-surface: rgba(17,17,17,0.04);
    --color-text: var(--text-dark);
    --color-muted: rgba(17,17,17,0.6);
-   --card-bg: #fff;
+   --card-bg: rgba(17,17,17,0.1);
+   --accent-color: var(--primary);
 
    background: var(--bg-light);
    color: var(--text-light);
 
    --panel-bg: rgba(255,255,255,.7); 
+}
+
+[data-theme="light"] #header .right_wrap .change_list li > button img {
+   filter: none;
+}
+[data-theme="light"] #header .right_wrap .change_list li > button.on {
+   background: #27cdee;
 }
 
 /* Hero title: default for dark mode, and primary color only in light mode */
@@ -192,6 +206,11 @@ body[data-theme="light"] .mainVisual_wrap .hero-title {
 [data-theme="light"] .about_contents .conBox {
    border: 1px solid #ddd;
 }
+
+[data-theme="light"] .galleryModal .modalContent .t1,
+[data-theme="light"] .galleryModal .modalContent .btn.modalLink,
+[data-theme="light"] .galleryModal .modalClose,
+[data-theme="light"] .galleryModal .modalNav {color: #fff;}
 
 /* Swiper shadow gradients: switch to white->transparent for light mode */
 [data-theme="light"] .swiper-container-3d .swiper-slide-shadow-left {

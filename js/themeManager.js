@@ -10,6 +10,7 @@
             this.toggleBtn = toggleBtn;
             this.selectorBtns = selectorBtns;
             this.theme = 'dark';
+            this.userDefined = false;
         }
 
         init() {
@@ -31,36 +32,68 @@
             this.selectorBtns.forEach((btn) => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const t = btn.classList.contains('light') ? 'light' : 'dark';
+                    const t = btn.dataset.themeValue || (btn.classList.contains('light') ? 'light' : 'dark');
                     this.setTheme(t);
                 });
             });
         }
 
         _restore() {
-            const saved = localStorage.getItem(lsKey);
+            let saved = null;
+            try {
+                saved = localStorage.getItem(lsKey);
+            } catch (e) { /* ignore storage errors */ }
             if (saved) {
+                this.userDefined = true;
                 this.setTheme(saved, false);
                 return;
             }
-            const hasLightOn = qs('.change_list a.light.on');
-            this.setTheme(hasLightOn ? 'light' : 'dark', false);
+
+            let defaultTheme = 'dark';
+            const activeBtn = (this.selectorBtns || []).find((btn) => btn.classList.contains('on'));
+            if (activeBtn && activeBtn.dataset.themeValue) {
+                defaultTheme = activeBtn.dataset.themeValue;
+            } else if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: light)');
+                if (mq.matches) {
+                    defaultTheme = 'light';
+                }
+                const listener = (event) => {
+                    if (!this.userDefined) {
+                        this.setTheme(event.matches ? 'light' : 'dark', false);
+                    }
+                };
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', listener);
+                } else if (mq.addListener) {
+                    mq.addListener(listener);
+                }
+            }
+            this.setTheme(defaultTheme, false);
         }
 
         setTheme(theme, persist = true) {
             this.theme = theme;
             document.body.dataset.theme = theme;
+            document.documentElement.dataset.theme = theme;
 
             if (this.toggleBtn) this.toggleBtn.textContent = theme === 'dark' ? 'Light' : 'Dark';
 
             if (this.selectorBtns && this.selectorBtns.length) {
                 this.selectorBtns.forEach((btn) => {
-                    if (btn.classList.contains('light')) btn.classList.toggle('on', theme === 'light');
-                    if (btn.classList.contains('dark')) btn.classList.toggle('on', theme === 'dark');
+                    const targetTheme = btn.dataset.themeValue || (btn.classList.contains('light') ? 'light' : 'dark');
+                    const isActive = targetTheme === theme;
+                    btn.classList.toggle('on', isActive);
+                    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
                 });
             }
 
-            if (persist) localStorage.setItem(lsKey, theme);
+            if (persist) {
+                try {
+                    localStorage.setItem(lsKey, theme);
+                    this.userDefined = true;
+                } catch (e) { /* ignore storage errors */ }
+            }
         }
 
         toggle() {

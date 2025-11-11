@@ -4,12 +4,43 @@
             "title": "대한전기협회",
             "image": "./images/main/portfolio01.jpg",
             "alt": "대한전기협회 웹사이트 미리보기",
-            "link": "https://example.com/portfolio/daejeon",
+            "link": "https://www.kea.kr/main/",
             "info": [
-                "퍼블리싱 및 반응형 레이아웃 구현",
-                "접근성 및 SEO 최적화 적용"
+                "담당 역할: 서브페이지 디자인 총괄, 유지보수 담당",
+                "6개 개별 사이트 통합 및 통일성 있는 디자인 구현",
+                "웹 접근성 기준 준수, 반응형 레이아웃 적용",
+                "추가 계약으로 진행된 모바일 앱 2개 프로젝트 디자인 및 퍼블리싱 참여",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript",
+                "성과: 기존 사이트 대비 사용자 편의성 향상, 유지보수 효율 증가, 앱 프로젝트까지 연계 진행하여 서비스 확장 지원"
             ],
-            "description": "대한전기협회 공식 웹사이트 퍼블리싱 작업"
+            "description": "대한전기협회 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "한국성인간호학회",
+            "image": "./images/main/portfolio46.jpg",
+            "alt": "한국성인간호학회 웹사이트 미리보기",
+            "link": "https://www.ana.or.kr/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "학술행사 온라인 교육 신청 및 마이페이지 동영상 시청/자료 다운로드 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "한국성인간호학회 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "펫츠앤미",
+            "image": "./images/main/portfolio47.jpg",
+            "alt": "펫츠앤미 웹사이트 미리보기",
+            "link": "https://petsandme.co.kr/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현, 유지보수 담당",
+                "Swiper 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "업체와 운영팀의 갈등 조정 및 원활한 소통 지원",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
         },
         {
             "title": "캘리포니아주립대",
@@ -17,10 +48,164 @@
             "alt": "캘리포니아주립대 웹사이트 미리보기",
             "link": "https://example.com/portfolio/calstate",
             "info": [
-                "UI/UX 개선 및 이미지 최적화",
-                "콘텐츠 구조화 작업"
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현, 유지보수 담당",
+                "Swiper 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "탭 메뉴를 활용하여 다량의 콘텐츠 정리",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
             ],
-            "description": "대학 홍보 사이트 퍼블리싱 및 콘텐츠 마이그레이션"
+            "description": "대학 홍보 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "센트럴병원",
+            "image": "./images/main/portfolio39.jpg",
+            "alt": "센트럴병원 웹사이트 미리보기",
+            "link": "https://www.cmch.co.kr/new/main/index.php",
+            "info": [
+                "담당 역할:메인, 서브페이지 진료센터 메뉴 디자인 개편",
+                "많은 메뉴와 그 안에 다량의 콘텐츠를 통일성 있게 정리",
+                "fullpage 활용하여 메인페이지 레이아웃 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "병원 홍보 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "시스터리",
+            "image": "./images/main/portfolio38.jpg",
+            "alt": "시스터리 웹사이트 미리보기",
+            "link": "https://www.sisterlyskin.com/main/",
+            "info": [
+                "담당 역할:서브페이지·마이페이지·회원페이지 등 (메인 제외 모든 페이지 디자인 및 퍼블리싱)",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "디에스티",
+            "image": "./images/main/portfolio37.jpg",
+            "alt": "디에스티 웹사이트 미리보기",
+            "link": "https://www.dst.co.kr/main/",
+            "info": [
+                "담당 역할:메인페이지, 서브페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "디에스티 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "위더스티엠",
+            "image": "./images/main/portfolio36.jpg",
+            "alt": "위더스티엠 웹사이트 미리보기",
+            "link": "http://www.withustm.com/main/",
+            "info": [
+                "담당 역할:메인페이지 디자인 및 퍼블리싱, 반응형",
+                "Swiper 활용한 인터랙션 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "위더스티엠 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "서초청년센터",
+            "image": "./images/main/portfolio35.jpg",
+            "alt": "서초청년센터 웹사이트 미리보기",
+            "link": "https://www.seochoyc.org/main/main.php",
+            "info": [
+                "담당 역할:메인페이지 디자인 및 퍼블리싱, 반응형",
+                "Swiper 활용한 인터랙션 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "관공서 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "성산효대학원대학교",
+            "image": "./images/main/portfolio34.jpg",
+            "alt": "성산효대학원대학교 웹사이트 미리보기",
+            "link": "https://www.hyo.ac.kr/main/",
+            "info": [
+                "담당 역할:메인, 서브페이지 디자인 및 퍼블리싱",
+                "탭 메뉴를 활용하여 다량의 콘텐츠 정리",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "대학 홍보 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "서울농아인협회",
+            "image": "./images/main/portfolio33.jpg",
+            "alt": "서울농아인협회 웹사이트 미리보기",
+            "link": "https://www.sdeaf.or.kr/main/",
+            "info": [
+                "담당 역할:서브페이지 디자인 및 퍼블리싱",
+                "이미지맵을 활용한 서브페이지 작업",
+                "메뉴 hover 시 수화동영상 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "협회 홍보 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "연고드림",
+            "image": "./images/main/portfolio06.jpg",
+            "alt": "연고드림 웹사이트 미리보기",
+            "link": "https://www.yonkodream.com/main/index.php",
+            "info": [
+                "이미지 위주의 메인페이지",
+                "강의 구매·마이페이지 강의시청 및 과제/강사 소통 기능 구현"
+            ],
+            "description": "온라인 강의 플랫폼 기능 포함"
+        },
+        {
+            "title": "리치피그",
+            "image": "./images/main/portfolio45.jpg",
+            "alt": "리치피그 웹사이트 미리보기",
+            "link": "https://www.pig-mart.com/main/",
+            "info": [
+                "담당 역할:메인페이지 디자인",
+                "Swiper/GSAP 활용한 인터랙션 구현",
+                "축산유통정보 API 적용"
+            ],
+            "description": "쇼핑몰/유통 웹사이트 메인페이지 디자인 및 인터랙션 구현"
+        },
+        {
+            "title": "흥옌성 클린산업단지",
+            "image": "./images/main/portfolio44.jpg",
+            "alt": "흥옌성 클린산업단지 웹사이트 미리보기",
+            "link": "https://www.vtkip.vn/new/main/main.php",
+            "info": [
+                "구글 언어 번역 API 등록",
+                "chart.js"
+            ],
+            "description": "산업단지 소개 페이지"
+        },
+        {
+            "title": "당진도시공사",
+            "image": "./images/main/portfolio42.jpg",
+            "alt": "당진도시공사 웹사이트 미리보기",
+            "link": "https://www.djuc.or.kr/main/",
+            "info": [
+                "담당 역할:서브페이지 디자인 및 퍼블리싱 및 유지보수",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "광공서 대표 홈페이지 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "단아미",
+            "image": "./images/main/portfolio41.jpg",
+            "alt": "단아미 웹사이트 미리보기",
+            "link": "https://www.danami.kr/main/",
+            "info": [
+                "Swiper 활용한 인터랙션 구현",
+                "쇼핑몰 디자인 및 퍼블리싱"
+            ],
+            "description": "쇼핑몰 메인 및 서브페이지 디자인"
+        },
+        {
+            "title": "베스트콜밴",
+            "image": "./images/main/portfolio40.jpg",
+            "alt": "베스트콜밴 웹사이트 미리보기",
+            "link": "http://bestcallvan.com/main/",
+            "info": [
+                "담당 역할:홍보용 원페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현"
+            ],
+            "description": "홍보용 원페이지 디자인 및 퍼블리싱"
         },
         {
             "title": "산타모니카주립대",
@@ -28,10 +213,12 @@
             "alt": "산타모니카주립대 웹사이트 미리보기",
             "link": "https://example.com/portfolio/santamonica",
             "info": [
-                "반응형 그리드 설계",
-                "터치 인터랙션 개선"
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현, 유지보수 담당",
+                "Swiper 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "탭 메뉴를 활용하여 다량의 콘텐츠 정리",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
             ],
-            "description": "학부/학과 소개 페이지 리뉴얼 퍼블리싱"
+            "description": "대학 홍보 사이트 디자인 및 퍼블리싱 작업"
         },
         {
             "title": "텍사스주립대",
@@ -39,10 +226,12 @@
             "alt": "텍사스주립대 웹사이트 미리보기",
             "link": "https://example.com/portfolio/texasstate",
             "info": [
-                "대용량 이미지 최적화",
-                "접근성 레이블 추가"
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현, 유지보수 담당",
+                "Swiper 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "탭 메뉴를 활용하여 다량의 콘텐츠 정리",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
             ],
-            "description": "학교 캠퍼스 정보 페이지 퍼블리싱"
+            "description": "대학 홍보 사이트 디자인 및 퍼블리싱 작업"
         },
         {
             "title": "바코드판다",
@@ -65,6 +254,245 @@
                 "접근성 및 가독성 향상 작업"
             ],
             "description": "의료기관 웹사이트 퍼블리싱"
+        },        
+        {
+            "title": "일성신약아이에스",
+            "image": "./images/main/portfolio12.jpg",
+            "alt": "일성신약아이에스 웹사이트 미리보기",
+            "link": "https://www.ilsungis.com/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현, 유지보수 담당",
+                "Swiper 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "기업의 다양한 약제품을 효과적으로 소개할 수 있는 레이아웃 설계",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": ""
+        },
+        {
+            "title": "평택국제평화포럼",
+            "image": "./images/main/portfolio43.jpg",
+            "alt": "평택국제평화포럼 웹사이트 미리보기",
+            "link": "http://www.pipf.kr/main/",
+            "info": [
+                "담당 역할:포럼 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "이미지를 활용한 레이아웃",
+                "Swiper/GSAP 활용한 인터랙션 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "포럼 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },     
+        {
+            "title": "한국가정방문간호학회",
+            "image": "",
+            "alt": "한국가정방문간호학회 웹사이트 미리보기",
+            "link": "https://www.kahhn.or.kr/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "학술행사 신청 및 마이페이지 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "한국가정방문간호학회 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },        
+        {
+            "title": "광복회 학술원",
+            "image": "",
+            "alt": "광복회 학술원 웹사이트 미리보기",
+            "link": "https://www.k-academy.kr/sub_about/overview.php",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "한국중소자영업총연합회",
+            "image": "",
+            "alt": "한국중소자영업총연합회 웹사이트 미리보기",
+            "link": "http://www.ksef-org.or.kr/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "돌콤허니",
+            "image": "",
+            "alt": "돌콤허니 웹사이트 미리보기",
+            "link": "https://www.dolkomhoney.com/main/shopping.php",
+            "info": [
+                "담당 역할:서브페이지·마이페이지·회원페이지 등 (메인 제외 모든 페이지 디자인 및 퍼블리싱)",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "한국사회공헌연구원",
+            "image": "",
+            "alt": "한국사회공헌연구원 웹사이트 미리보기",
+            "link": "http://kriosc.inetpf.co.kr/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "자격증 시험 및 교육 신청 및 마이페이지 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "서울대국제문제연구소 (영문)",
+            "image": "",
+            "alt": "서울대국제문제연구소 영문 사이트 미리보기",
+            "link": "http://www.snuiis.re.kr/eng/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "기창렌탈",
+            "image": "",
+            "alt": "기창렌탈 웹사이트 미리보기",
+            "link": "https://www.kichang.net/rb/main/index.php",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper/GSAP 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "아침농장",
+            "image": "",
+            "alt": "아침농장 웹사이트 미리보기",
+            "link": "https://www.morningapple.co.kr/main/",
+            "info": [
+                "담당 역할:서브페이지·마이페이지·회원페이지 등 (메인 제외 모든 페이지 디자인 및 퍼블리싱)",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "한국방문간호사회",
+            "image": "./images/main/portfolio13.jpg",
+            "alt": "한국방문간호사회 웹사이트 미리보기",
+            "link": "https://www.vnak.org/main/index.php",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "학술행사 신청 및 마이페이지 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "한국가정방문간호학회 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "한국통일평화간호학회",
+            "image": "./images/main/portfolio15.jpg",
+            "alt": "한국통일평화간호학회 웹사이트 미리보기",
+            "link": "https://www.kpausn.or.kr/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "학술행사 신청 및 마이페이지 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "한국가정방문간호학회 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },        
+        
+        {
+            "title": "위더스파크",
+            "image": "./images/main/portfolio36.jpg",
+            "alt": "위더스파크 웹사이트 미리보기",
+            "link": "https://www.withuspark.com/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "국제경보산업",
+            "image": "./images/main/portfolio20.jpg",
+            "alt": "국제경보산업 웹사이트 미리보기",
+            "link": "https://kjkb.co.kr/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "오픈마일",
+            "image": "./images/main/portfolio13.jpg",
+            "alt": "오픈마일 웹사이트 미리보기",
+            "link": "https://www.openmile.co.kr/main/",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "용답동노인복지관",
+            "image": "./images/main/portfolio14.jpg",
+            "alt": "용답동노인복지관 웹사이트 미리보기",
+            "link": "https://www.ydscenter.org/main/main.php",
+            "info": [
+                "담당 역할:기업 홍보용 홈페이지 디자인 및 퍼블리싱",
+                "Swiper/aos 활용한 인터랙션 구현"
+            ],
+            "description": "기업 홍보용 홈페이지 디자인 및 퍼블리싱"
+        },
+        {
+            "title": "케희 웬 연극 페스티벌",
+            "image": "./images/main/portfolio32.jpg",
+            "alt": "케희 웬 연극 페스티벌 웹사이트 미리보기",
+            "link": "http://www.wentheatre.com/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "케희 웬 연극 페스티벌 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "서울대학교 아시아연구소",
+            "image": "./images/main/portfolio31.jpg",
+            "alt": "서울대학교 아시아연구소 웹사이트 미리보기",
+            "link": "http://snuac-cas.snu.ac.kr/main/",
+            "info": [
+                "담당 역할: 메인·서브페이지 디자인 및 퍼블리싱, 인터랙션 구현,  유지보수 담당",
+                "Swiper/GSAP 활용한 메인페이지·서브페이지 인터랙션 구현",
+                "학술행사 신청 및 마이페이지 기능 구현",
+                "회원 관리 및 로그인 페이지 디자인/퍼블리싱",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper, GSAP"
+            ],
+            "description": "서울대학교 아시아연구소 공식 웹사이트 디자인 및 퍼블리싱 작업"
+        },        
+        {
+            "title": "유원몰",
+            "image": "./images/main/portfolio30.jpg",
+            "alt": "유원몰 웹사이트 미리보기",
+            "link": "https://www.u1mall.kr/main/",
+            "info": [
+                "담당 역할:서브페이지·마이페이지·회원페이지 등 (메인 제외 모든 페이지 디자인 및 퍼블리싱)",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
+        },
+        {
+            "title": "카네이션메디패스 요양보호사 쇼핑몰",
+            "image": "./images/main/portfolio17.jpg",
+            "alt": "카네이션메디패스 쇼핑몰 미리보기",
+            "link": "https://www.xn--950b802abse03h.kr/shop/main/",
+            "info": [
+                "담당 역할:서브페이지·마이페이지·회원페이지 등 (메인 제외 모든 페이지 디자인 및 퍼블리싱)",
+                "사용 기술: Photoshop, Illustrator, HTML/CSS, JavaScript, Swiper"
+            ],
+            "description": "쇼핑몰 사이트 디자인 및 퍼블리싱 작업"
         }
     ],
     "sideProjects": [

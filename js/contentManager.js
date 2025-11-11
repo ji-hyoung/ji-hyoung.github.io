@@ -4,6 +4,9 @@
     // current gallery state
     let galleryItems = [];
     let galleryCurrentIndex = -1;
+    let lastFocusedElement = null;
+    let focusTrapCleanup = null;
+    let inertSiblings = [];
 
     function fetchContentData() {
         if (contentPromise) {
@@ -33,13 +36,10 @@
         slide.className = 'swiper-slide el';
         // data-index will be assigned by renderPortfolio when items array index is known
 
-        const anchor = document.createElement('a');
-        anchor.className = 'in';
-        // if (item.link) {
-        //     anchor.href = item.link;
-        //     anchor.target = item.target || '_blank';
-        //     anchor.rel = item.rel || 'noopener noreferrer';
-        // }
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'in';
+    trigger.setAttribute('aria-label', item.title ? `${item.title} 상세 보기` : '프로젝트 상세 보기');
 
         const imgWrap = document.createElement('div');
         imgWrap.className = 'img';
@@ -52,9 +52,8 @@
 
         const img = document.createElement('img');
         img.src = item.image;
-        if (item.alt) {
-            img.alt = item.alt;
-        }
+        img.loading = 'lazy';
+        img.alt = item.alt || item.title || '';
 
         re.appendChild(img);
         resize.appendChild(re);
@@ -68,9 +67,9 @@
         title.textContent = item.title;
 
         content.appendChild(title);
-        anchor.appendChild(imgWrap);
-        anchor.appendChild(content);
-        slide.appendChild(anchor);
+        trigger.appendChild(imgWrap);
+        trigger.appendChild(content);
+        slide.appendChild(trigger);
 
         return slide;
     }
@@ -86,6 +85,7 @@
             imageBox.style.backgroundSize = item.backgroundSize || 'cover';
             imageBox.style.backgroundPosition = item.backgroundPosition || 'center';
             imageBox.setAttribute('role', 'presentation');
+            imageBox.setAttribute('aria-hidden', 'true');
         }
 
         const textBox = document.createElement('div');
@@ -122,9 +122,8 @@
 
         const img = document.createElement('img');
         img.src = item.image;
-        if (item.alt) {
-            img.alt = item.alt;
-        }
+        img.loading = 'lazy';
+        img.alt = item.alt || item.name || '';
 
         re.appendChild(img);
         resize.appendChild(re);
@@ -163,6 +162,10 @@
         items.forEach((item, idx) => {
             const slide = createPortfolioSlide(item);
             slide.dataset.index = String(idx);
+            slide.setAttribute('role', 'group');
+            if (item.title || item.alt) {
+                slide.setAttribute('aria-label', item.title || item.alt);
+            }
             wrapper.appendChild(slide);
         });
 
@@ -181,10 +184,13 @@
         wrapper._hasGalleryHandler = true;
 
         wrapper.addEventListener('click', function (e) {
-            const el = e.target.closest('.swiper-slide');
-            if (!el) return;
-            const idx = parseInt(el.dataset.index, 10);
+            const trigger = e.target.closest('.swiper-slide .in');
+            if (!trigger) return;
+            const slide = trigger.closest('.swiper-slide');
+            if (!slide) return;
+            const idx = parseInt(slide.dataset.index, 10);
             if (Number.isNaN(idx)) return;
+            lastFocusedElement = trigger;
             openGalleryModalByIndex(idx);
         });
 
@@ -228,6 +234,60 @@
         openGalleryModalByIndex(next);
     }
 
+    const FOCUSABLE_SELECTORS = [
+        'a[href]','area[href]','button:not([disabled])','input:not([disabled]):not([type="hidden"])',
+        'select:not([disabled])','textarea:not([disabled])','[tabindex]:not([tabindex="-1"])'
+    ].join(',');
+
+    function setBackgroundInert(isInert) {
+        const modal = document.getElementById('galleryModal');
+        if (!modal) return;
+        if (isInert) {
+            inertSiblings = Array.from(document.body.children).filter((el) => el !== modal);
+            inertSiblings.forEach((el) => {
+                el.setAttribute('aria-hidden', 'true');
+                if ('inert' in el) {
+                    el.inert = true;
+                }
+            });
+            document.body.style.overflow = 'hidden';
+        } else {
+            inertSiblings.forEach((el) => {
+                el.removeAttribute('aria-hidden');
+                if ('inert' in el) {
+                    el.inert = false;
+                }
+            });
+            inertSiblings = [];
+            document.body.style.overflow = '';
+        }
+    }
+
+    function trapFocus(modal) {
+        const handleKeydown = (event) => {
+            if (event.key !== 'Tab') return;
+            const focusable = Array.from(modal.querySelectorAll(FOCUSABLE_SELECTORS))
+                .filter((el) => el.offsetParent !== null || el === modal)
+                .filter((el) => el.getAttribute('aria-hidden') !== 'true');
+            if (!focusable.length) {
+                event.preventDefault();
+                modal.focus();
+                return;
+            }
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        };
+        modal.addEventListener('keydown', handleKeydown);
+        return () => modal.removeEventListener('keydown', handleKeydown);
+    }
+
     function openGalleryModal(item) {
         const modal = document.getElementById('galleryModal');
         if (!modal || !item) return;
@@ -236,8 +296,13 @@
             const idx = galleryItems.indexOf(item);
             if (idx >= 0) galleryCurrentIndex = idx;
         } catch (e) { /* ignore */ }
+        setBackgroundInert(true);
         modal.setAttribute('aria-hidden', 'false');
         modal.classList.add('on');
+        if (focusTrapCleanup) {
+            focusTrapCleanup();
+        }
+        focusTrapCleanup = trapFocus(modal);
         // populate
         const imgEl = modal.querySelector('.modalMedia .img img');
         const titleEl = modal.querySelector('.modalContent .t1');
@@ -252,9 +317,12 @@
         if (linkEl) {
             if (item.link) {
                 linkEl.href = item.link;
+                linkEl.removeAttribute('hidden');
                 linkEl.style.display = '';
             } else {
+                linkEl.setAttribute('hidden', '');
                 linkEl.style.display = 'none';
+                linkEl.removeAttribute('href');
             }
         }
 
@@ -268,12 +336,18 @@
                     el.textContent = p;
                     infoEl.appendChild(el);
                 });
+                infoEl.removeAttribute('hidden');
             } else {
-                // fallback placeholder
-                const el = document.createElement('p');
-                el.className = 'tt';
-                el.textContent = item.description || '';
-                infoEl.appendChild(el);
+                const fallback = item.description || '';
+                if (fallback) {
+                    const el = document.createElement('p');
+                    el.className = 'tt';
+                    el.textContent = fallback;
+                    infoEl.appendChild(el);
+                    infoEl.removeAttribute('hidden');
+                } else {
+                    infoEl.setAttribute('hidden', '');
+                }
             }
         }
 
@@ -287,6 +361,15 @@
         if (!modal) return;
         modal.setAttribute('aria-hidden', 'true');
         modal.classList.remove('on');
+        if (focusTrapCleanup) {
+            focusTrapCleanup();
+            focusTrapCleanup = null;
+        }
+        setBackgroundInert(false);
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+        }
+        lastFocusedElement = null;
     }
 
     function renderSideProjects(items) {

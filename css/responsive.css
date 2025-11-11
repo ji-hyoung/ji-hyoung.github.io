@@ -2,29 +2,99 @@
    Loaded after components.css to preserve cascade.
 */
 
-@media screen and (max-width:1680px) { body { font-size:15px; } }
-
-@media screen and (max-width:1400px) { }
-
-@media screen and (max-width:1280px) { }
-
-@media screen and (max-width:1024px) { 
-  [data-aos^=fade][data-aos^=fade] { opacity:1 !important; transform:translateZ(0) !important; } 
-  .PC { display: none; } 
-  .PHONE { display: block; } 
-  .goTop { display:none; } 
+@media screen and (max-width:1680px) {
+  :root { font-size: 15px; }
 }
 
-@media screen and (max-width:768px) { body { font-size:14px; } }
+/* widescreen -> desktop */
+@media screen and (max-width:1400px) {
+}
 
-@media screen and (max-width:460px) {}
+@media screen and (max-width:1280px) {
+}
 
-@media screen and (max-width:380px) { body { font-size:12px; } }
+/* tablet and smaller: switch some desktop-only animations off and stack panels */
+@media screen and (max-width:1024px) {
+  /* AOS simplified for performance */
+  [data-aos^=fade] { opacity: 1 !important; transform: translateZ(0) !important; }
 
-@media screen and (max-width:320px) { }
+  /* switch presentation classes */
+  .PC { display: none; }
+  .flex.PC { display: none; }
+  .PHONE { display: block; }
+  .goTop { display: none; }
 
-@media screen and (max-width:280px) { body { font-size:10px; } }
+  .box1 {padding: unset;}
 
-@media all and (max-width:1024px) and (orientation:landscape) { }
+  .headH {height: 8em;}
+  #header > .inner {padding: .5em 0;}
+  #header .menu {margin-top: .5em;}
+  #header .gnb_wrap .gnb > li {flex: 1;}
+  #header .gnb_wrap .gnb > li .dp1 {display: block; text-align: center; padding: .5em 1em;}
 
-@media screen and (max-device-width:1024px) { }
+  #footer .site_info .myinfo .name {font-size: 2.5em;}
+
+  .title_box .title {font-size: 3.5em;}
+  .main_side .side_list li {padding: 1em; gap: 2em;}
+  .main_side .side_list li .img {height: 10em;}
+  .main_side .side_list li .t_box .tit {font-size: 1.4em;}
+  .main_side .side_list li .t_box .txt {font-size: .9em;}
+
+  .about_contents {flex-wrap: wrap;}
+  .about_contents .conBox {flex: 1 100%;}
+
+  .galleryModal .modalNav {width: 2.4rem; height: 2.4rem;}
+  .galleryModal .modalNav.prev {left: 0;}
+  .galleryModal .modalNav.next {right: 0;}
+  .galleryModal .modalBody {flex-wrap: wrap; padding: 2em;}
+  .galleryModal .modalMedia {flex: 1 100%; min-width: 100%;}
+  
+  
+
+}
+
+/* phone portrait and small tablets */
+@media screen and (max-width:768px) {
+  :root { font-size: 14px; }
+
+}
+/* phone portrait and small tablets */
+@media screen and (max-width:500px) {
+#header .right_wrap {gap: 0 1em;}
+#header .right_wrap .change_list {padding: .3em;}
+#header .right_wrap .change_list li > button img {width: 15px;}
+#header .gnb_wrap .gnb > li .dp1 .tt {font-size: 1em;}
+
+.title_box .title {font-size: 3em;}
+.mainGallery .el .con .tt {font-size: 1em;}
+
+.about_contents .conBox {padding: 2em;}
+.skill_list li {flex: 1 27.3%; max-width: 31%;}
+.skill_list li .con .t2 {font-size: 1em;}
+
+.graph {height: 23px;}
+.graph span {height: 23px; line-height: 23px;}
+
+}
+/* very small phones */
+@media screen and (max-width:460px) {
+  :root { font-size: 13px; }
+
+}
+
+@media screen and (max-width:380px) {
+  :root { font-size: 12px; }
+}
+
+@media screen and (max-width:320px) {
+  :root { font-size: 11px; }
+}
+
+/* orientation-specific tweaks for landscape tablets */
+@media all and (max-width:1024px) and (orientation:landscape) {
+}
+
+/* low-end / device-width fallback */
+@media screen and (max-device-width:1024px) {
+}
+
