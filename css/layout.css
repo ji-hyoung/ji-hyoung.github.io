@@ -27,7 +27,7 @@
 #footer .site_info .myinfo { display: flex; flex-direction: column; gap: .75em; }
 #footer .site_info .myinfo .name { font-size: 3em; font-weight: 700; color: var(--color-text); }
 #footer .site_info .myinfo .mail { color: var(--color-text); font-size: 1.25em; margin-top: 0; display: inline-flex; align-items: center; gap: .75em; }
-#footer .site_info .myinfo .mail img { width: 2em; vertical-align: middle; }
+#footer .site_info .myinfo .mail img { width: 1.8em; vertical-align: middle; filter: invert(1);}
 #footer .site_info .copy { color: var(--color-muted); font-size: 1.125em; text-transform: uppercase; letter-spacing: .08em; }
 
 #contents { position: relative; }

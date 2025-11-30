@@ -100,12 +100,12 @@
                         },
                         // 501~1024: 2개
                         501: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 20
                         },
                         // 1025 이상: 3개
                         1025: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             spaceBetween: 30
                         }
                     },

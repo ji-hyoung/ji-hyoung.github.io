@@ -65,6 +65,11 @@
 #header .right_wrap .change_list li > button img {width: 15px;}
 #header .gnb_wrap .gnb > li .dp1 .tt {font-size: 1em;}
 
+#footer .site_info .myinfo .name {font-size: 2em;}
+#footer .site_info .myinfo .mail {font-size: 1.125em; gap: .5em;}
+#footer .site_info .myinfo .mail img {width: 1.4em;}
+#footer .site_info .copy {letter-spacing: .03em;}
+
 .title_box .title {font-size: 3em;}
 .mainGallery .el .con .tt {font-size: 1em;}
 
