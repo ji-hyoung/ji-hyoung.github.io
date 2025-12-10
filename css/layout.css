@@ -9,7 +9,7 @@
 /* #header .gnb_wrap .gnb > li { display: flex; } */
 #header .gnb_wrap .gnb > li .dp1 { padding: .5em 3em; border-radius: 3em; transition: background-color .2s ease, color .2s ease; }
 #header .gnb_wrap .gnb > li .dp1 .tt { font-size: 1.125em; color: var(--color-text); }
-#header .gnb_wrap .gnb > li .dp1:hover { background: var(--accent-color); }
+#header .gnb_wrap .gnb > li .dp1:hover { background: var(--primary); }
 #header .gnb_wrap .gnb > li .dp1:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
 #header .right_wrap { display: flex; align-items: center; gap: 0 2em; }
 #header .right_wrap .change_list { display: flex; align-items: center; background: var(--overlay-light); padding: .5em; border-radius: 3em; gap: 1em; overflow: hidden; }
@@ -17,7 +17,7 @@
 #header .right_wrap .change_list li:not(:last-child):after { content: ""; position: absolute; top: 50%; right: -5px; transform: translateY(-50%); background: var(--sep-light); width: 1px; height: 20px; }
 #header .right_wrap .change_list li > button { display: inline-flex; width: 2.25em; height: 2.25em; align-items: center; justify-content: center; text-align: center; border-radius: 50%; border: 0; background: none; cursor: pointer; padding: 0; transition: background-color .2s ease, transform .2s ease; }
 #header .right_wrap .change_list li > button img { width: 20px; filter: brightness(0) invert(1); }
-#header .right_wrap .change_list li > button.on { background: var(--accent-color); }
+#header .right_wrap .change_list li > button.on { background: var(--primary); }
 #header .right_wrap .change_list li > button:focus-visible { transform: scale(1.05); outline: 3px solid var(--focus-ring); outline-offset: 2px; }
 #header .time_wrap { width: 6.5em; text-align: center; }
 #header .time_wrap time { color: var(--color-text); font-size: 1.4em; letter-spacing: .02em; }

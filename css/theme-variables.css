@@ -99,11 +99,19 @@
    --panel-bg: rgba(255,255,255,.7); 
 }
 
+[data-theme="light"] #header .gnb_wrap .gnb > li:hover .dp1 .tt {
+   color: #fff;
+}
 [data-theme="light"] #header .right_wrap .change_list li > button img {
    filter: none;
 }
+[data-theme="light"] #header .right_wrap .change_list li:hover > button,
 [data-theme="light"] #header .right_wrap .change_list li > button.on {
-   background: #27cdee;
+   background: var(--primary);
+}
+[data-theme="light"] #header .right_wrap .change_list li:hover > button img,
+[data-theme="light"] #header .right_wrap .change_list li > button.on img  {
+   filter: brightness(0) invert(1);
 }
 
 /* Hero title: default for dark mode, and primary color only in light mode */

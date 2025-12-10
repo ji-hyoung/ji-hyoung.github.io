@@ -216,8 +216,8 @@
 .skill_list {gap: 2.5em 1em;}
 .skill_list li {flex: 1 22%;}
 .skill_list li .img {border-radius: 1em; overflow: hidden;}
-.skill_list li .con { /* placeholder; styles moved */ --moved: components; margin-top: 1em;}
-.skill_list li .con .t1 { /* placeholder; styles moved */ --moved: components; }
+.skill_list li .con {--moved: components; margin-top: 1em;}
+.skill_list li .con .t1 { --moved: components; }
 .skill_list li .con .t2 {font-size: 1.125em; font-weight: 600;}
 
 .graph {height: 30px; background: var(--graph-fill); border-radius: 40px; margin-top: 1em; border: 1px solid var(--primary);}

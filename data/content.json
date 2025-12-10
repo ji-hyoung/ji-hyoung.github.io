@@ -438,22 +438,22 @@
     "skills": [
         {
             "name": "HTML",
-            "percentage": 80,
+            "percentage": 90,
             "image": "./images/main/skill01.jpg",
             "alt": "HTML아이콘",
             "graphClass": "stack"
         },
         {
             "name": "CSS",
-            "percentage": 80,
+            "percentage": 90,
             "image": "./images/main/skill02.jpg",
             "alt": "CSS아이콘",
             "graphClass": "stack2"
         },
         {
             "name": "javascript&jQuery",
-            "percentage": 60,
-            "image": "./images/main/skill05.jpg",
+            "percentage": 80,
+            "image": "./images/main/skill06.jpg",
             "alt": "javascript아이콘",
             "graphClass": "stack3"
         },
@@ -480,7 +480,7 @@
         },
         {
             "name": "Tailwind",
-            "percentage": 60,
+            "percentage": 90,
             "image": "./images/main/skill08.jpg",
             "alt": "TAILWIND아이콘",
             "graphClass": "stack7"
