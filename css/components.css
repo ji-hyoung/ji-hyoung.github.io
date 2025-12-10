@@ -228,6 +228,7 @@
 .graph.stack4 span {animation: stack4 2s 1;}
 .graph.stack5 span {animation: stack5 2s 1;}
 .graph.stack6 span {animation: stack6 2s 1;}
+
 @keyframes stack {
     0% { width: 0; color: rgba(255,255,255,0);} 
     50% { width: 0; color: rgba(255,255,255,0);} 

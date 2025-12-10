@@ -4,7 +4,7 @@
 #header > .inner { position: relative; }
 #header .logo { font-size: 1.8em; color: var(--color-text); font-weight: 800; display: inline-flex; align-items: center; gap: .25em; }
 #header .logo a { color: inherit; display: inline-flex; align-items: center; gap: .25em; text-decoration: none; }
-#header .logo .point { color: var(--primary); }
+#header .logo .point { color: var(--primary);}
 #header .gnb_wrap .gnb { background: var(--overlay-light); padding: .5em; border-radius: 3em; overflow: hidden; display: flex; align-items: center; gap: .25em; }
 /* #header .gnb_wrap .gnb > li { display: flex; } */
 #header .gnb_wrap .gnb > li .dp1 { padding: .5em 3em; border-radius: 3em; transition: background-color .2s ease, color .2s ease; }
