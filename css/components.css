@@ -221,7 +221,7 @@
 .skill_list li .con .t2 {font-size: 1.125em; font-weight: 600;}
 
 .graph {height: 30px; background: var(--graph-fill); border-radius: 40px; margin-top: 1em; border: 1px solid var(--primary);}
-.graph span {display: block; box-sizing: border-box; color: #fff; width: 80%; height: 30px; line-height: 30px; text-align: right; padding-right: .8em; background: var(--accent-color); border-radius: 40px; font-size: .8em;}
+.graph span {display: block; box-sizing: border-box; color: #fff; width: 80%; height: 30px; line-height: 30px; text-align: right; padding-right: .8em; background: var(--primary); border-radius: 40px; font-size: .8em;}
 .graph.stack span {animation: stack 2s 1;}
 .graph.stack2 span {animation: stack2 2s 1;}
 .graph.stack3 span {animation: stack3 2s 1;}
